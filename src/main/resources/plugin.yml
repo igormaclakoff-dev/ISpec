@@ -1,0 +1,23 @@
+name: ISpec
+version: '1.0.0'
+main: com.auracode.ispec.IspecPlugin
+api-version: '1.21'
+authors: [AuraCode]
+description: Modern spectation plugin with full session logging, boss bar, bossbar and Discord webhooks.
+website: https://auracode.dev
+
+commands:
+  ispec:
+    description: Spectation command
+    permission: ispec.use
+    aliases: [inspect, watch]
+
+permissions:
+  ispec.use:
+    default: op
+  ispec.bypass:
+    default: op
+  ispec.notify:
+    default: op
+  ispec.reload:
+    default: op

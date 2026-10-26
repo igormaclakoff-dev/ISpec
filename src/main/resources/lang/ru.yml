@@ -1,0 +1,42 @@
+# ============================================================
+#  ISpec — язык: русский (от AuraCode)
+# ============================================================
+#  Используется MiniMessage: <#8A5CF6>, <gradient>, <bold>, <gray>...
+#  Плейсхолдеры: {0}, {1}, {2}...
+# {NL} = перенос строки.
+# ============================================================
+
+# Префикс чата (фирменный стиль: фиолетовый ромб + градиент)
+prefix: "<#8A5CF6>◆</#8A5CF6> <gradient:#8A5CF6:#FF7000>ISpec</gradient> <dark_gray>»</dark_gray> <gray>"
+
+boss-bar:
+  name: "<#8A5CF6>◆</#8A5CF6> <gradient:#8A5CF6:#FF7000>Наблюдение</gradient> <dark_gray>»</dark_gray> <white>{0}"
+
+messages:
+  usage: "<red>◆</red> <gray>Использование: <white>/ispec <go|off|lang|reload></white></gray>"
+  unknown-subcommand: "<red>◆</red> <gray>Неизвестная подкоманда.</gray>"
+  specify-suspect: "<red>◆</red> <gray>Укажите ник игрока для наблюдения.</gray>"
+  specify-reason: "<red>◆</red> <gray>Укажите причину.</gray>"
+  suspect-not-found: "<red>◆</red> <gray>Игрок <white>{0}</white> не найден.</gray>"
+  suspect-bypassed: "<red>◆</red> <gray>Нельзя наблюдать за этим игроком.</gray>"
+  cannot-spectate-self: "<red>◆</red> <gray>Нельзя наблюдать за собой.</gray>"
+  already-spectating: "<red>◆</red> <gray>Вы уже наблюдаете за кем-то.</gray>"
+  target-is-spectating: "<red>◆</red> <gray>Нельзя наблюдать за игроком, который сам сейчас наблюдает.</gray>"
+  invalid-reason: "<red>◆</red> <gray>Используйте причину из списка.</gray>"
+  started: "<green>◆</green> <gray>Теперь вы наблюдаете за <white>{0}</white>. Дата: <white>{1}</white>.</gray>"
+  started-notify: "<#8A5CF6>◆</#8A5CF6> <gray>Персонал <white>{0}</white> начал наблюдение за <white>{1}</white> — причина: <white>{2}</white>. Дата: <white>{3}</white>.</gray>"
+  stopped: "<green>◆</green> <gray>Наблюдение окончено. Дата: <white>{0}</white>, Игрок: <white>{1}</white>.</gray>"
+  stopped-notify: "<#8A5CF6>◆</#8A5CF6> <gray>Персонал <white>{0}</white> закончил наблюдение за <white>{1}</white> в <white>{2}</white>. Длительность: <white>{3}</white>.</gray>"
+  not-spectating: "<red>◆</red> <gray>Вы сейчас ни за кем не наблюдаете.</gray>"
+  suspect-left: "<yellow>◆</yellow> <gray>Игрок <white>{0}</white> покинул сервер. Дата: <white>{1}</white>.</gray>"
+  too-far: "<yellow>◆</yellow> <gray>Вы улетели слишком далеко — телепортация обратно!</gray>"
+  action-bar: "<#8A5CF6>◆</#8A5CF6> <gray>{0}</gray> <dark_gray>|</dark_gray> <gray>Пинг: <white>{1}мс</white></gray>"
+  command-blocked: "<red>◆</red> <gray>Эта команда заблокирована во время наблюдения.</gray>"
+  gamemode-locked: "<red>◆</red> <gray>Нельзя менять игровой режим во время наблюдения.</gray>"
+  stopped-by-gamemode-change: "<yellow>◆</yellow> <gray>Наблюдение остановлено из-за смены режима. Дата: <white>{0}</white>, Игрок: <white>{1}</white>.</gray>"
+  world-not-found: "<red>◆</red> <gray>Мир для возврата не найден. Обратитесь к администратору.</gray>"
+  reload-done: "<green>◆</green> <gray>Конфигурация ISpec перезагружена.</gray>"
+  no-permission: "<red>◆</red> <gray>Недостаточно прав.</gray>"
+  player-only: "<red>◆</red> <gray>Только игроки могут использовать эту команду.</gray>"
+  lang-list: "<#8A5CF6>◆</#8A5CF6> <gray>Доступные языки: <white>en, ru</white>. Сейчас: <white>{0}</white>."
+  lang-set: "<green>◆</green> <gray>Язык переключён на <white>{0}</white>.</gray>"

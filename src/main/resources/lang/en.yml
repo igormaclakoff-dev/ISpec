@@ -1,0 +1,42 @@
+# ============================================================
+#  ISpec — язык: English (от AuraCode)
+# ============================================================
+#  Uses MiniMessage: <#8A5CF6>, <gradient>, <bold>, <gray>...
+#  Placeholders: {0}, {1}, {2}...
+# {NL} = new line.
+# ============================================================
+
+# Chat prefix (brand style: purple diamond + gradient name)
+prefix: "<#8A5CF6>◆</#8A5CF6> <gradient:#8A5CF6:#FF7000>ISpec</gradient> <dark_gray>»</dark_gray> <gray>"
+
+boss-bar:
+  name: "<#8A5CF6>◆</#8A5CF6> <gradient:#8A5CF6:#FF7000>Spectating</gradient> <dark_gray>»</dark_gray> <white>{0}"
+
+messages:
+  usage: "<red>◆</red> <gray>Usage: <white>/ispec <go|off|lang|reload></white></gray>"
+  unknown-subcommand: "<red>◆</red> <gray>Unknown subcommand.</gray>"
+  specify-suspect: "<red>◆</red> <gray>Specify the suspect's nickname.</gray>"
+  specify-reason: "<red>◆</red> <gray>Specify the reason.</gray>"
+  suspect-not-found: "<red>◆</red> <gray>Player <white>{0}</white> not found.</gray>"
+  suspect-bypassed: "<red>◆</red> <gray>You can't spectate this player.</gray>"
+  cannot-spectate-self: "<red>◆</red> <gray>You cannot spectate yourself.</gray>"
+  already-spectating: "<red>◆</red> <gray>You are already spectating someone.</gray>"
+  target-is-spectating: "<red>◆</red> <gray>You cannot spectate a player who is currently spectating.</gray>"
+  invalid-reason: "<red>◆</red> <gray>You must use a pre-defined reason.</gray>"
+  started: "<green>◆</green> <gray>Now spectating <white>{0}</white>. Date: <white>{1}</white>.</gray>"
+  started-notify: "<#8A5CF6>◆</#8A5CF6> <gray>Staff <white>{0}</white> started spectating <white>{1}</white> — reason: <white>{2}</white>. Date: <white>{3}</white>.</gray>"
+  stopped: "<green>◆</green> <gray>Spectation finished. Date: <white>{0}</white>, Suspect: <white>{1}</white>.</gray>"
+  stopped-notify: "<#8A5CF6>◆</#8A5CF6> <gray>Staff <white>{0}</white> finished spectating <white>{1}</white> at <white>{2}</white>. Duration: <white>{3}</white>.</gray>"
+  not-spectating: "<red>◆</red> <gray>You are not spectating anyone.</gray>"
+  suspect-left: "<yellow>◆</yellow> <gray>Player <white>{0}</white> left the server. Date: <white>{1}</white>.</gray>"
+  too-far: "<yellow>◆</yellow> <gray>You flew too far — teleporting back!</gray>"
+  action-bar: "<#8A5CF6>◆</#8A5CF6> <gray>{0}</gray> <dark_gray>|</dark_gray> <gray>Ping: <white>{1}ms</white></gray>"
+  command-blocked: "<red>◆</red> <gray>This command is blocked while spectating.</gray>"
+  gamemode-locked: "<red>◆</red> <gray>You can't change gamemode during spectation.</gray>"
+  stopped-by-gamemode-change: "<yellow>◆</yellow> <gray>Spectation stopped by gamemode change. Date: <white>{0}</white>, Suspect: <white>{1}</white>.</gray>"
+  world-not-found: "<red>◆</red> <gray>Return world not found. Contact an administrator.</gray>"
+  reload-done: "<green>◆</green> <gray>ISpec configuration reloaded.</gray>"
+  no-permission: "<red>◆</red> <gray>You don't have permission.</gray>"
+  player-only: "<red>◆</red> <gray>Only players can use this command.</gray>"
+  lang-list: "<#8A5CF6>◆</#8A5CF6> <gray>Available languages: <white>en, ru</white>. Current: <white>{0}</white>."
+  lang-set: "<green>◆</green> <gray>Language switched to <white>{0}</white>.</gray>"

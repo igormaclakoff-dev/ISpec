@@ -1,0 +1,100 @@
+# ============================================================
+#  ISpec  —  от AuraCode
+# ============================================================
+#  Наблюдение за игроками: /ispec go <ник> [причина], /ispec off.
+#  Полное логирование, bossbar, actionbar и Discord webhooks.
+#
+#  Перезагрузить: /ispec reload
+#  Сменить язык в игре: /ispec lang <en|ru>
+#
+#  Плагин использует MiniMessage (как IChat, IShulker, AuraInvsee):
+#  HEX:       <#8A5CF6>текст</#8A5CF6>
+#  Градиент:  <gradient:#8A5CF6:#FF7000>текст</gradient>
+#  Жирный:    <bold>текст</bold>
+#
+#  Все сообщения и оформления — в папке plugins/ISpec/lang/.
+# ============================================================
+
+# Язык сообщений: en / ru (можно сменить в игре: /ispec lang ru)
+language: en
+
+# ============================================================
+#  ПОВЕДЕНИЕ
+# ============================================================
+settings:
+  # Включать ли подсветку (glow) подозреваемого.
+  suspect-glow: true
+
+  # Бесконечное ночное зрение для наблюдателя.
+  night-vision: true
+
+  # Bossbar над экраном наблюдателя.
+  # Текст настраивается в lang/<язык>.yml — ключ boss-bar.name.
+  boss-bar:
+    enabled: true
+    color: PURPLE
+    overlay: PROGRESS
+
+  # Информация над хотбаром: ник и пинг подозреваемого.
+  action-bar:
+    enabled: true
+    interval-ticks: 20
+
+  # Максимальная дистанция (в блоках) до подозреваемого —
+  # при превышении наблюдателя телепортирует обратно.
+  max-distance: 25.0
+
+  # Политика причин (reason).
+  reason:
+    # true = после ника обязательно указать причину.
+    required: false
+    # true = разрешена любая причина.
+    any: true
+    # при any=false: strict=true — только из presets, strict=false — только подсказки.
+    strict: true
+    presets:
+      - cheats
+      - report
+      - xray
+
+  # Останавливать наблюдение при внешней смене игрового режима.
+  stop-on-gamemode-change: true
+
+  # Команды, запрещённые во время наблюдения.
+  blocked-commands:
+    - /sethome
+    - /setwarp
+
+  # Уведомлять персонал с правом ispec.notify о старте/окончании.
+  notify: true
+
+  # Телепортировать наблюдателя после окончания.
+  teleport-after-stop: true
+  return-to-old-location: false
+  return-to-old-gamemode: false
+
+  # Мир и координаты для возврата при return-to-old-location=false.
+  return-world: world
+  return-x: 0.5
+  return-y: 90.0
+  return-z: 0.5
+  return-gamemode: SURVIVAL
+
+  # Звуки при старте/окончании наблюдения (как в ITickets).
+  sounds:
+    start:
+      enabled: true
+      sound: "entity.experience_orb.pickup"
+    stop:
+      enabled: true
+      sound: "entity.player.levelup"
+
+  # Discord webhook URL. Пусто = выключено.
+  webhook-url: ""
+  webhook-start-payload: '{"content":null,"embeds":[{"title":"Spectating of `{0}` has begun.","description":"Start date: {1}\nReason: {2}\nSpectator: {4}","color":8624383}],"attachments":[]}'
+  webhook-stop-payload: '{"content":null,"embeds":[{"title":"Spectating of `{0}` is complete.","description":"End date: {1}\nDuration: {2}\nSpectator: {4}","color":43520}],"attachments":[]}'
+
+  # Формат дат в логах и сообщениях (как в ITickets).
+  date-pattern: "dd.MM.yyyy - HH:mm:ss"
+  time-zone: "Europe/Moscow"
+  duration-format: "{0} h, {1} min, {2} sec"
