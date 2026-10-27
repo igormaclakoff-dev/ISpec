@@ -1,36 +1,22 @@
 # ISpec
+Modern spectation plugin for Paper 1.21.x from **AuraCode**.
 
-Модерный плагин наблюдения для Paper 1.21.x от **AuraCode**.
+## Installation
+Download [ISpec-1.0.0.jar](https://github.com/igormaclakoff-dev/ISpec/releases/latest) into `plugins/`.
 
-## Возможности
-- `/ispec go <ник> [причина]` — начать наблюдение (spectator mode)- `/ispec off` — закончить наблюдение
-- `/ispec lang <en|ru>` — сменить язык прямо в игре
-- `/ispec reload` — перезагрузить конфиг
+## Features
+- `/ispec go <ник> [причина]` — начать наблюдение
+- `/ispec off` — окончить
+- `/ispec lang <en|ru>` — язык в игре
+- `/ispec reload` — перезагрузка
 
-## Особенности
-- **Фирменный дизайн AuraCode**: ◆ айконки, брендовое #8A5CF6 + градиент, MiniMessage
-- **Bossbar и Actionbar** — ник и пинг подозреваемого
-- **Дистанция-контроль** — телепорт наблюдателя обратно при отлёте > N блоков
-- **Полное логирование сессий** — чат, команды, локация; асинхронная запись на диск с архивацией файлов
-- **Discord webhook** уведомления о начале/окончании
-- **Двуязычность** — English / Русский, выбор в config.yml и в игре
-- **Настраиваемые причины наблюдения**, блокируемые команды, звуки
-
-## Права
-| Право | Что даёт |
-|---|---|
-| `ispec.use` | доступ к команде |
-| `ispec.bypass` | защита от наблюдения |
-| `ispec.notify` | уведомления о сессиях |
-| `ispec.reload` | перезагрузка и смена языка |
-
-## Сборка
+## Build
 ```bash
 mvn clean package
 ```
-Готовый jar: `target/ISpec-1.0.0.jar`
+Ready jar: `target/ISpec-1.0.0.jar`
 
-## Требования
+## Requirements
 - Paper 1.21.x
 - Java 21
 
